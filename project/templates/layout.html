@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css' )}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="lib/sweetalert2.css">     -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico' )}}" type="image/x-icon">
+    <link href="http://allfont.es/allfont.css?fonts=comfortaa" rel="stylesheet" type="text/css" />
+    <title>Principal</title>
+</head>
+
+<body>
+  <header>
+    <!--Menu-->
+    <div class="navbar-fixed">
+      <nav class="bg_azul">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo "><img src="../static/img/logoFooterWhite.png" alt="Logo" class="logoHeader responsive-img" title="Inicio"></a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger left text"><i class="material-icons">menu_open</i></a>
+          <ul class="right hide-on-med-and-down">
+              <li><a href="#acerca_ocw" title="Descripción del OCW">
+                <img src="../static/img/navbar/mnuProductos.png" class="imgNavbar">Productos</a>
+              </li>
+              <li><a href="usuarios" title="Gestión usuarios">
+                <img src="../static/img/navbar/mnuUsuarios.png" class="imgNavbar">Usuarios</a>
+              </li>
+              <li><a href="#syllabus" title="Contenido temático">
+                <img src="../static/img/navbar/mnuDeseos.png" class="imgNavbar">Lista de deseos</a>
+              </li>
+              <!-- Dropdown Trigger -->
+              <!-- <li><a class="dropdown-trigger" href="#kitBienvenida" data-target="id_drop"
+                  title="Despliega las opciones">Kit de bienvenida ocw<i
+                      class="material-icons right">arrow_drop_down</i></a></li> -->
+              <li><a class="modal-trigger" title="Recomendaciones y preguntas">
+                <img src="../static/img/navbar/icoAyuda.svg" class="imgNavbar">Pepito Perez</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- <ul id="id_drop" class="dropdown-content">
+      <li><a href="#modalPerfil" title="Conocimientos, habilidades y aptitudes"
+          class="white-text modal-trigger"><img src="img/principal/icoPerfil.svg" class="imgNavbar">Perfil estudiante</a></li>
+      <li class="divider"></li>
+      <li><a href="#modalRecursos" title="Materiales utilizados en el curso" class="white-text modal-trigger"><img
+        src="img/principal/icoRecursos.svg" class="imgNavbar">Rec. didácticos</a></li>
+      <li class="divider"></li>
+      <li><a href="#modalDuracion" title="Dosificación de los contenidos" class="white-text modal-trigger"><img
+        src="img/principal/icoDuracion.png" class="imgNavbar">Duración</a>
+      </li>
+    </ul> -->
+
+    <!-- MENU MOVIL-->
+    <ul id="mobile-demo" class="sidenav">
+      <li class="bg_azul"><img src="../static/img/logoFooterWhite.png" alt="Logo" class="responsive-img" width="500"></li>
+      <li><a href="./index.html" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">account_balance</i>Inicio</a></li>
+      <li class="divider"></li>
+      <li><a href="#acerca_ocw" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">category</i>Productos</a></li>
+      <li class="divider"></li>
+      <li><a href="#competencias_ocw" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">groups</i>Usuarios</a></li>
+      <li class="divider"></li>
+      <li><a href="#syllabus" title="Contenido temático" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">shopping_cart</i>Lista de deseos</a>
+        <li class="divider"></li>
+      </li>
+      <!-- Dropdown Trigger -->
+      <!-- <li>
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="hover_menu collapsible-header waves-effect blue-text text-darken-4">Kit de bienvenida ocw<i
+                class="material-icons left blue-text text-darken-4">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="#modalPerfil" class="hover_menu modal-trigger blue-text text-darken-4" title="Conocimientos, habilidades y aptitudes"><i
+                      class="material-icons left blue-text text-darken-4">group</i>Perfil estudiante</a></li>
+                <li class="divider"></li>
+                <li><a href="#modalRecursos" class="hover_menu modal-trigger blue-text text-darken-4" title="Materiales utilizados en el curso"><i
+                      class="material-icons left blue-text text-darken-4">important_devices</i>Rec. didácticos</a></li>
+                <li class="divider"></li>
+                <li><a href="#modalDuracion" class="hover_menu modal-trigger blue-text text-darken-4" title="Dosificación de los contenidos"><i
+                      class="material-icons left blue-text text-darken-4">access_time</i>Duración</a>
+                </li>
+                <li class="divider"></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li> -->
+      <!-- <li><a href="#modalAyuda" class="hover_menu modal-trigger blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">help</i>Ayuda</a></li> -->
+    </ul>
+</header>
+
+  <!--Main-->
+  <main>
+    {% block body %}
+
+    {% endblock %}
+  </main>
+
+  <!--Footer-->
+  <footer class="bg_blue page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m8 l8 left-align">
+          <h5 class="white-text">Contacto sede Pasto</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons tiny">house</i> Calle #18 Carrera 50 Centro.</a>
+            </li>
+            <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons tiny">location_on</i> Pasto - Nariño, Colombia.</a>
+            </li>
+            <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons tiny">phone</i> 7000000</a>
+            </li>
+            <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons tiny">mail</i> chelotengo@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col s12 offset-l2 m4 l2 responsive-img right">
+          <img src="../static/img/logoNabvarWhite.png" alt="Escudo Udenar" width="200">
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright darken-5">
+      <div class="container">
+        © 2021 Licencia Creative Commons. | <a class="modal-trigger white-text" href="#modalAviso">Aviso legal.</a>
+        <a class="grey-text text-lighten-4 right" href="#!">Desarrollado Por: <b>Equipo N°3. | UniNorte</b></a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Compiled and minified JavaScript -->
+  <!-- <script type="text/javascript" src="lib/sweetalert2.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      //M.AutoInit();
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+
+      var elems = document.querySelectorAll('.dropdown-trigger');
+      var instances = M.Dropdown.init(elems);
+
+      var elems = document.querySelectorAll('.collapsible');
+      var instances = M.Collapsible.init(elems);
+
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
+
+      var elems = document.querySelectorAll('.select');
+      var instances = M.FormSelect.init(elems);
+    });
+  </script>
+
+</body>
+</html>
