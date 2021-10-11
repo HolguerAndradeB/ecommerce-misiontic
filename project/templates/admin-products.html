@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+{% block body %} <!--INICIO DEL BLOQUE BODY-->
+    <div class="row">
+        <div class="left card-panel z-depth-1 col s12 m12 l12">
+            <h5 class="blue-text text-darken-4">Registro de productos</h5>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12 m3 l3">
+                            <i class="material-icons prefix">star</i>
+                            <input id="icon_prefix" type="text" class="validate">
+                            <label for="icon_prefix">Nombre</label>
+                        </div>
+                        <div class="input-field col s12 m3 l3">
+                            <i class="material-icons prefix">description</i>
+                            <input id="icon_prefix" type="text" class="validate">
+                            <label for="icon_prefix">Descripción</label>
+                        </div>
+                        <div class="input-field col s12 m3 l3">
+                            <i class="material-icons prefix">request_quote</i>
+                            <input id="icon_prefix" type="number" class="validate">
+                            <label for="icon_prefix">Precio</label>
+                        </div>
+                        <div class="input-field col s12 m3 l3">
+                            <i class="material-icons prefix">inventory_2</i>
+                            <input id="icon_telephone" type="number" class="validate">
+                            <label for="icon_telephone">Stock</label>
+                        </div>
+                        <div class="center">
+                            <button class="btn waves-effect waves-light" type="submit" value="REGISTRAR" style="width: 200px;">REGISTRAR<i class="large material-icons right">person_add_alt</i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- <div class="spaceT"></div> -->
+        <div class="right card-panel z-depth-1 col s12 m12 l12">
+            <h4 class="blue-text text-darken-4 center">Productos registrados</h4>
+            <table class="striped centered responsive-table">
+                <thead class="teal" style="color: white;">
+                    <tr>
+                        <th><b>Imagen</b></th>
+                        <th><b>Producto</b></th>
+                        <th><b>Precio</b></th>
+                        <th><b>Stock</b></th>
+                        <th><b>Gestión</b></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>IMG</td>
+                        <td>Pera</td>
+                        <td>10000</td>
+                        <td>100</td>
+                        <td>
+                            <a href="#" title="Ver detalles"><i class="iconos material-icons blue-text">visibility</i></a>
+                            <a href="edit-product" title="Modificar"><i class="iconos material-icons green-text">edit</i></a>
+                            <a href="#" title="Eliminar"><i class="iconos material-icons red-text">delete</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>IMG</td>
+                        <td>Mora</td>
+                        <td>2500</td>
+                        <td>500</td>
+                        <td>
+                            <a href="#" title="Ver detalles"><i class="iconos material-icons blue-text">visibility</i></a>
+                            <a href="edit-product" title="Modificar"><i class="iconos material-icons green-text">edit</i></a>
+                            <a href="#" title="Eliminar"><i class="iconos material-icons red-text">delete</i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %} <!--FIN DEL BLOQUE BODY-->

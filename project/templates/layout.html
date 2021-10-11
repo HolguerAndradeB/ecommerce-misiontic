@@ -20,23 +20,20 @@
     <div class="navbar-fixed">
       <nav class="bg_azul">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo "><img src="../static/img/logoFooterWhite.png" alt="Logo" class="logoHeader responsive-img" title="Inicio"></a>
+          <a href="index" class="brand-logo "><img src="../static/img/logoFooterWhite.png" alt="Logo" class="logoHeader responsive-img" title="Inicio"></a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger left text"><i class="material-icons">menu_open</i></a>
           <ul class="right hide-on-med-and-down">
-              <li><a href="#acerca_ocw" title="Descripción del OCW">
+              <li><a href="admin-products" title="Gestión productos">
                 <img src="../static/img/navbar/mnuProductos.png" class="imgNavbar">Productos</a>
               </li>
-              <li><a href="usuarios" title="Gestión usuarios">
+              <li><a href="users" title="Gestión usuarios">
                 <img src="../static/img/navbar/mnuUsuarios.png" class="imgNavbar">Usuarios</a>
               </li>
-              <li><a href="#syllabus" title="Contenido temático">
+              <li><a href="#" title="Carrito de compras">
                 <img src="../static/img/navbar/mnuDeseos.png" class="imgNavbar">Lista de deseos</a>
               </li>
-              <!-- Dropdown Trigger -->
-              <!-- <li><a class="dropdown-trigger" href="#kitBienvenida" data-target="id_drop"
-                  title="Despliega las opciones">Kit de bienvenida ocw<i
-                      class="material-icons right">arrow_drop_down</i></a></li> -->
-              <li><a class="modal-trigger" title="Recomendaciones y preguntas">
+              <!-- MENU DESPLEGABLE -->
+              <li><a class="dropdown-trigger" data-target="dropUser">
                 <img src="../static/img/navbar/icoAyuda.svg" class="imgNavbar">Pepito Perez</a>
               </li>
           </ul>
@@ -44,17 +41,16 @@
       </nav>
     </div>
 
-    <!-- <ul id="id_drop" class="dropdown-content">
-      <li><a href="#modalPerfil" title="Conocimientos, habilidades y aptitudes"
-          class="white-text modal-trigger"><img src="img/principal/icoPerfil.svg" class="imgNavbar">Perfil estudiante</a></li>
-      <li class="divider"></li>
-      <li><a href="#modalRecursos" title="Materiales utilizados en el curso" class="white-text modal-trigger"><img
-        src="img/principal/icoRecursos.svg" class="imgNavbar">Rec. didácticos</a></li>
-      <li class="divider"></li>
-      <li><a href="#modalDuracion" title="Dosificación de los contenidos" class="white-text modal-trigger"><img
-        src="img/principal/icoDuracion.png" class="imgNavbar">Duración</a>
+    <!-- DESPLEGABLE USUARIO -->
+    <ul id="dropUser" class="dropdown-content">
+      <li>
+        <a class="fontsWhite" href="/edit-profile" title="Configuración"><i class="large material-icons green-text">manage_accounts</i>Perfil</a>
       </li>
-    </ul> -->
+      <li class="divider"></li>
+      <li>
+        <a class="fontsWhite" href="/index" title="Cerrar sesión"><i class="large material-icons red-text">highlight_off</i>Salir</a>
+      </li>
+    </ul>
 
     <!-- MENU MOVIL-->
     <ul id="mobile-demo" class="sidenav">

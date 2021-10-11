@@ -1,10 +1,11 @@
 {% extends 'layout.html' %}
 {% block body %} <!--INICIO DEL BLOQUE BODY-->
+
     <div class="row">
         <div class="left card-panel z-depth-1 col s12 m12 l12">
-            <h5 class="blue-text text-darken-4">Formulario de registro</h5>
+            <h5 class="blue-text text-darken-4">Información del usuario</h5>
             <div class="row">
-                <form class="col s12">
+                <form action="users" class="col s12">
                     <div class="row">
                         <div class="input-field col s12 m4 l4">
                             <i class="material-icons prefix">account_circle</i>
@@ -45,52 +46,11 @@
                                 <label>Tipo de usuario</label>
                         </div>
                         <div class="center">
-                            <button class="btn waves-effect waves-light" type="submit" name="accion" value="REGISTRAR" style="width: 300px;">REGISTRAR<i class="material-icons right">person_add_alt</i></button>
+                            <button class="btn waves-effect waves-light" type="submit" value="MODIFICAR" style="width: 200px;">MODIFICAR<i class="large material-icons right">edit</i></button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
-        <!-- <div class="spaceT"></div> -->
-        <div class="right card-panel z-depth-1 col s12 m12 l12">
-            <h4 class="blue-text text-darken-4 center">Usuarios registrados</h4>
-            <table class="striped centered responsive-table">
-                <thead class="teal" style="color: white;">
-                    <tr>
-                        <th><b>Fecha</b></th>
-                        <th><b>Cliente</b></th>
-                        <th><b>Vendedor</b></th>
-                        <th><b>Valor total</b></th>
-                        <th><b>Gestión</b></th>
-                    </tr>
-                </thead>
-                
-                <tbody>
-                    <tr>
-                        <td>2020-15-06</td>
-                        <td>Pepito Perez</td>
-                        <td>Sandra Ortiz</td>
-                        <td>$100000</td>
-                        <td>
-                            <i class="material-icons blue-text">visibility</i>
-                            <i class="material-icons green-text">edit</i>
-                            <i class="material-icons red-text">delete</i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2020-17-03</td>
-                        <td>Juanita Torres</td>
-                        <td>Pedro Lopez</td>
-                        <td>$57000</td>
-                        <td>
-                            <i class="material-icons blue-text">visibility</i>
-                            <i class="material-icons green-text">edit</i>
-                            <i class="material-icons red-text">delete</i>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
     </div>
-    
 {% endblock %} <!--FIN DEL BLOQUE BODY-->

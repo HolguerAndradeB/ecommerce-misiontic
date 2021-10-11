@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleLogin.css' )}}">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" > -->
+
+    <title>Principal</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="principal" class="sign-in-form">
+                    <img src="../static/img/logoFooterBlue.png" alt="Imgen login" class="image">
+                    <h2 class="title">Iniciar sesión</h2>
+                    <div class="input-field">
+                        <i class="material-icons tiny">perm_identity</i>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons tiny">lock_open</i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <input type="submit" class="btn solid" value="Ingresar">
+                    <!-- <p class="social-text">Or Sign In with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="material-icons tiny">explore</i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="material-icons tiny">explore</i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="material-icons tiny">explore</i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="material-icons tiny">explore</i>
+                        </a>
+                    </div> -->
+                </form>
+          
+                <form action="login" class="sign-up-form">
+                    <img src="../static/img/logoFooterBlue.png" alt="Imgen login" class="image">
+                    <h2 class="title">Registro</h2>
+                    <div class="input-field">
+                        <i class="material-icons tiny">account_circle</i>
+                        <input type="text" placeholder="Nombres">
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons tiny">person</i>
+                        <input type="text" placeholder="Apellidos">
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons tiny">contact_phone</i>
+                        <input type="text" placeholder="Celular">
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons tiny">email</i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons tiny">lock_open</i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <input type="submit" class="btn solid" value="Registrarme">
+                    <!-- <p class="social-text">Or Sign Up with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="material-icons tiny">explore</i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="material-icons tiny">explore</i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="material-icons tiny">explore</i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="material-icons tiny">explore</i>
+                        </a>
+                    </div> -->
+                </form>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>¿Nuevo por aquí?</h3>
+                    <p>Bienvenido a Chelotengo, la mejor plataforma E-commerce del momento, cuenta con una gran cantidad de productos y servicios para ofrecerle.</p>
+                    <button class="btn transparent" id="sign-up-button">Registrarme</button>
+                </div>
+                <img src="../static/img/login/login.png" alt="Imgen login" class="image">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>¿Ya eres parte de nosotros?</h3>
+                    <p>Si ya tiene una cuenta registrada en nuestra plataforma E-commerce, ingrese con su usuario y contraseña para continuar disfrutando de todos los servicios de Chelotengo.
+                    </p>
+                    <button class="btn transparent" id="sign-in-button">Iniciar sesión</button>
+                </div>
+                <img src="../static/img/login/register.svg" alt="Imgen Registro" class="image">
+            </div>
+        </div>
+    </div>
+
+    <!-- <i class="material-icons tiny">mail</i> -->
+    
+    <script src="{{ url_for('static', filename='js/main.js' )}}"></script>
+</body>
+</html>
