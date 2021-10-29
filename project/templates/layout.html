@@ -23,10 +23,13 @@
           <a href="index" class="brand-logo "><img src="../static/img/logoFooterWhite.png" alt="Logo" class="logoHeader responsive-img" title="Inicio"></a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger left text"><i class="material-icons">menu_open</i></a>
           <ul class="right hide-on-med-and-down">
+              <li><a href="admin-products" title="Tienda">
+                <img src="../static/img/navbar/mnuTienda.png" class="imgNavbar">Tienda</a>
+              </li>
               <li><a href="admin-products" title="Gestión productos">
                 <img src="../static/img/navbar/mnuProductos.png" class="imgNavbar">Productos</a>
               </li>
-              <li><a href="users" title="Gestión usuarios">
+              <li><a href="./users" title="Gestión usuarios">
                 <img src="../static/img/navbar/mnuUsuarios.png" class="imgNavbar">Usuarios</a>
               </li>
               <li><a href="#" title="Carrito de compras">
@@ -44,7 +47,7 @@
     <!-- DESPLEGABLE USUARIO -->
     <ul id="dropUser" class="dropdown-content">
       <li>
-        <a class="fontsWhite" href="/edit-profile" title="Configuración"><i class="large material-icons green-text">manage_accounts</i>Perfil</a>
+        <a class="fontsWhite" href="{{url_for('edit-profile', id=tercero.id)}}" title="Configuración"><i class="large material-icons green-text">manage_accounts</i>Perfil</a>
       </li>
       <li class="divider"></li>
       <li>
@@ -55,39 +58,18 @@
     <!-- MENU MOVIL-->
     <ul id="mobile-demo" class="sidenav">
       <li class="bg_azul"><img src="../static/img/logoFooterWhite.png" alt="Logo" class="responsive-img" width="500"></li>
-      <li><a href="./index.html" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">account_balance</i>Inicio</a></li>
       <li class="divider"></li>
-      <li><a href="#acerca_ocw" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">category</i>Productos</a></li>
+      <li><a href="principal" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">account_balance</i>Inicio</a></li>
       <li class="divider"></li>
-      <li><a href="#competencias_ocw" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">groups</i>Usuarios</a></li>
+      <li><a href="#" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">important_devices</i>Tienda</a></li>
       <li class="divider"></li>
-      <li><a href="#syllabus" title="Contenido temático" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">shopping_cart</i>Lista de deseos</a>
+      <li><a href="admin-products" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">category</i>Productos</a></li>
+      <li class="divider"></li>
+      <li><a href="users" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">groups</i>Usuarios</a></li>
+      <li class="divider"></li>
+      <li><a href="#" title="Contenido temático" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">shopping_cart</i>Lista de deseos</a>
         <li class="divider"></li>
       </li>
-      <!-- Dropdown Trigger -->
-      <!-- <li>
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="hover_menu collapsible-header waves-effect blue-text text-darken-4">Kit de bienvenida ocw<i
-                class="material-icons left blue-text text-darken-4">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="#modalPerfil" class="hover_menu modal-trigger blue-text text-darken-4" title="Conocimientos, habilidades y aptitudes"><i
-                      class="material-icons left blue-text text-darken-4">group</i>Perfil estudiante</a></li>
-                <li class="divider"></li>
-                <li><a href="#modalRecursos" class="hover_menu modal-trigger blue-text text-darken-4" title="Materiales utilizados en el curso"><i
-                      class="material-icons left blue-text text-darken-4">important_devices</i>Rec. didácticos</a></li>
-                <li class="divider"></li>
-                <li><a href="#modalDuracion" class="hover_menu modal-trigger blue-text text-darken-4" title="Dosificación de los contenidos"><i
-                      class="material-icons left blue-text text-darken-4">access_time</i>Duración</a>
-                </li>
-                <li class="divider"></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li> -->
-      <!-- <li><a href="#modalAyuda" class="hover_menu modal-trigger blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">help</i>Ayuda</a></li> -->
     </ul>
 </header>
 
